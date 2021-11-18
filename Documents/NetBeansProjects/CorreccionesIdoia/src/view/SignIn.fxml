@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="paneVentana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" styleClass="background" stylesheets="@fxml.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+   
+    <children>
+      <Label fx:id="lblUser" layoutX="264.0" layoutY="95.0" prefHeight="27.0" prefWidth="167.0" styleClass="lbl" stylesheets="@fxml.css" text="Usuario" />
+      
+      <Label fx:id="lblPasswd" layoutX="264.0" layoutY="170.0" prefHeight="27.0" prefWidth="167.0" styleClass="lbl" stylesheets="@fxml.css" text="Contraseña" />
+      
+      <TextField fx:id="textUser" layoutX="264.0" layoutY="131.0" prefHeight="25.0" prefWidth="207.0" />
+
+      <PasswordField fx:id="textPasswd" layoutX="264.0" layoutY="210.0" prefHeight="25.0" prefWidth="207.0" promptText="Min 8 caract. y números." /> 
+            
+      <Button fx:id="btnLogin" defaultButton="true" disable="true" layoutX="313.0" layoutY="265.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" styleClass="btn" stylesheets="@fxml.css" text="Iniciar sesión" />
+      
+      <Hyperlink fx:id="linkSignIn" layoutX="409.0" layoutY="303.0" prefHeight="23.0" prefWidth="87.0" text="Registrarse" />
+      
+      <Label fx:id="lblLogin" layoutX="54.0" layoutY="39.0" prefHeight="45.0" prefWidth="207.0" styleClass="header" stylesheets="@fxml.css" text="Iniciar sesión" />
+      
+      <Label fx:id="lblSignIn" layoutX="264.0" layoutY="306.0" prefHeight="17.0" prefWidth="145.0" text="¿No estás registrado?" />
+      
+      <ImageView fx:id="imgPeople" fitHeight="150.0" fitWidth="131.0" layoutX="92.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../photos/mssg.png" />
+         </image>
+      </ImageView>
+      
+      <ImageView fx:id="imgButtFly" fitHeight="78.0" fitWidth="79.0" layoutX="158.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../photos/descargas-removebg-preview.png" />
+         </image>
+      </ImageView>
+      
+      <Label fx:id="lblCaract" focusTraversable="false" layoutX="475.0" layoutY="206.0" prefHeight="17.0" prefWidth="153.0" styleClass="except" stylesheets="@fxml.css" text="* Menos de 8 carácteres" visible="false" />
+      
+      <Label fx:id="lblNum" focusTraversable="false" layoutX="475.0" layoutY="221.0" prefHeight="17.0" prefWidth="151.0" styleClass="except" stylesheets="@fxml.css" text="* No contiene números" visible="false" />
+   </children>
+   
+</Pane>

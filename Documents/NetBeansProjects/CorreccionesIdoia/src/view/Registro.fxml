@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane fx:id="paneSignUp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   
+    <top>
+        <Pane prefHeight="38.0" prefWidth="600.0" styleClass="background" stylesheets="@fxml.css" BorderPane.alignment="CENTER">
+         
+            <children>
+                <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/photos/descargas-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            
+                <Label layoutX="41.0" layoutY="11.0" prefHeight="17.0" prefWidth="86.0" text="Login Live™" />
+            </children>
+      
+        </Pane>
+    </top>
+   
+    <center>
+        <Pane prefHeight="322.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+          
+            <children>
+                <Label layoutX="54.0" styleClass="header" stylesheets="@fxml.css" text="Crea tu cuenta" />
+            
+                <Label layoutX="151.0" layoutY="109.0" prefHeight="27.0" prefWidth="43.0" styleClass="txt" stylesheets="@fxml.css" text="Usuario" />
+            
+                <Label layoutX="151.0" layoutY="189.0" prefHeight="27.0" prefWidth="68.0" styleClass="txt" stylesheets="@fxml.css" text="Contraseña" />
+                
+                <TextField fx:id="txtName" layoutX="307.0" layoutY="70.0" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="153.0" />
+                             
+                <TextField fx:id="txtUser" focusTraversable="true" layoutX="307.0" layoutY="110.0" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="153.0"  />
+               
+                <TextField fx:id="txtEmail" focusTraversable="true" layoutX="307.0" layoutY="148.0" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="153.0" promptText="ejemplo@live.com" />
+
+                <PasswordField fx:id="txtPasswd" focusTraversable="true" layoutX="307.0" layoutY="190.0" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="154.0" promptText="Min 8 caract. y números." />
+                
+                <PasswordField fx:id="txtPassw2" focusTraversable="true" layoutX="307.0" layoutY="232.0" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="154.0" promptText="Min 8 caract. y números." />
+
+           
+            
+                <Button fx:id="btnAtras" cancelButton="true" focusTraversable="true" layoutX="152.0" layoutY="268.0" mnemonicParsing="false" onAction="#buttonEventBack" prefHeight="31.0" prefWidth="109.0" text="Atrás" />
+            
+                <Separator layoutX="53.0" layoutY="44.0" prefHeight="1.0" prefWidth="495.0" />
+            
+                <Label layoutX="151.0" layoutY="148.0" prefHeight="27.0" prefWidth="43.0" styleClass="txt" stylesheets="@fxml.css" text="Correo" />
+            
+                       
+                <Label layoutX="151.0" layoutY="69.0" prefHeight="27.0" prefWidth="110.0" styleClass="txt" stylesheets="@fxml.css" text="Nombre y apellido" />
+            
+                       
+                <Button fx:id="btnSignUp" defaultButton="true" disable="true" focusTraversable="true" layoutX="352.0" layoutY="268.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="31.0" prefWidth="109.0" styleClass="btn" stylesheets="@fxml.css" text="Registrarse" />
+            
+                <Label layoutX="151.0" layoutY="221.0" prefHeight="47.0" prefWidth="68.0" styleClass="txt" stylesheets="@fxml.css" text="Repetir&#10;Contraseña" />
+            
+                        
+                <Label fx:id="lblCaract" focusTraversable="false" layoutX="464.0" layoutY="188.0" prefHeight="17.0" prefWidth="153.0" styleClass="except" stylesheets="@fxml.css" text="* Menos de 8 carácteres" visible="false" />
+            
+                <Label fx:id="lblNum" focusTraversable="false" layoutX="464.0" layoutY="200.0" prefHeight="17.0" prefWidth="151.0" styleClass="except" stylesheets="@fxml.css" text="* No contiene números" visible="false" />
+            
+                <Label fx:id="lblPasswd2" layoutX="464.0" layoutY="236.0" prefHeight="17.0" prefWidth="168.0" styleClass="except" stylesheets="@fxml.css" text="* No coinciden" visible="false" />
+            
+                <Label fx:id="lblEmail" focusTraversable="false" layoutX="464.0" layoutY="152.0" prefHeight="17.0" prefWidth="169.0" styleClass="except" stylesheets="@fxml.css" text="* Formato de correo incorrecto" visible="false" />
+            </children>
+         
+        </Pane>
+    </center>
+   
+</BorderPane>
